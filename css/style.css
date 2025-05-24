@@ -2250,8 +2250,7 @@ Main Header
   padding-right: 16px;
   margin-right: -16px;
 }
-.main-menu .navigation > li.dropdown > a:after {
-  content: "+";
+.main-menu .navigation > li.dropdown > a:after {  
   position: absolute;
   right: 0;
   top: 50%;
