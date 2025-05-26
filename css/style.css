@@ -2794,7 +2794,7 @@ Main Header
           transform: skewX(-30deg);
   -webkit-transform-origin: right top;
           transform-origin: right top;
-  width: 60%;
+  width: 65%;
 }
 @media only screen and (max-width: 1800px) {
   .header-style-two .header-top:before {
@@ -2921,7 +2921,7 @@ Main Header
   padding: 10px 0;
 }
 .sticky-header .logo img {
-  max-height: 40px;
+  max-height: 60px;
 }
 .sticky-header .nav-outer {
   position: relative;
@@ -4706,7 +4706,7 @@ Section Title
   padding: 10px;
   position: absolute;
   right: 0;
-  top: 43%;
+  top: 32%;
   width: 283px;
 }
 @media (max-width: 1199.98px) {
