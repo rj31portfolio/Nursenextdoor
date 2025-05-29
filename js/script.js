@@ -968,3 +968,26 @@ var THEMEMASCOT = {};
 	});	
 
 })(window.jQuery);
+
+
+window.onload = function () {
+  setTimeout(() => {
+    document.getElementById("popupForm").style.display = "flex";
+  }, 1000);
+};
+
+function closePopup() {
+  document.getElementById("popupForm").style.display = "none";
+}
+
+function nextStep() {
+  document.getElementById("step1").style.display = "none";
+  document.getElementById("step2").style.display = "block";
+}
+
+// OPTIONAL: Add your submit handler
+document.getElementById("formStep2").onsubmit = function (e) {
+  e.preventDefault();
+  alert("Form submitted successfully!");
+  closePopup();
+};
