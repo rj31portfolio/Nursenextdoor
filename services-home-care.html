@@ -457,36 +457,56 @@
 
         <!-- End blog-section -->
 
-      <!-- Step 1 -->
-<div id="step1">
-    <h3>Step 1 of 2</h3>
-    <form id="formStep1">
-        <input type="text" name="first_name" placeholder="First Name *" required />
-        <input type="text" name="last_name" placeholder="Last Name *" required />
-        <input type="tel" name="mobile" placeholder="Mobile Number *" required />
-        <input type="email" name="email" placeholder="Email *" required />
-        <button type="button" onclick="nextStep()">NEXT</button>
-    </form>
-</div>
+  <!--Popup Form-->
+		<!-- POPUP OVERLAY -->
+		<div id="popupForm" class="popup-overlay">
+			<div class="popup-content">
+				<button class="close-btn text-dark" onclick="closePopup()">×</button>
 
-<!-- Step 2 -->
-<div id="step2" style="display: none;">
-    <h3>Step 2 of 2</h3>
-    <form id="formStep2" action="send_mail.php" method="POST">
-        <input type="text" name="address" placeholder="Address *" required />
-        <input type="text" name="city" placeholder="City *" required />
-        <input type="text" name="state" placeholder="State *" required />
-        <input type="text" name="zip" placeholder="ZIP Code *" required />
-        
-        <!-- Hidden inputs to carry over step 1 data -->
-        <input type="hidden" name="first_name" id="hiddenFirstName">
-        <input type="hidden" name="last_name" id="hiddenLastName">
-        <input type="hidden" name="mobile" id="hiddenMobile">
-        <input type="hidden" name="email" id="hiddenEmail">
+				<div class="popup-left">
+					<h2>Talk To An Expert</h2>
+					<p class="text-light">
+						<h6><button class="btn btn-outline-success"><a href=""><strong>Download our
+										brochure</strong></a> </button> </h6>and talk to an industry expert that’ll help
+						you
+						understand:
+					</p>
+					<ol>
+						<li>Home Health Care Business Opportunity</li>
+						<li>Franchising vs Entrepreneurship</li>
+						<li>What makes Guru Ji Health Care Services a Premium Brand</li>
+						<li>Profit Potential & Purpose</li>
+					</ol>
+				</div>
 
-        <button type="submit">SUBMIT</button>
-    </form>
-</div>
+				<div class="popup-right">
+					<!-- Step 1 -->
+					<div id="step1">
+						<h3>Step 1 of 2</h3>
+						<form id="formStep1">
+							<input type="text" placeholder="First Name *" required />
+							<input type="text" placeholder="Last Name *" required />
+							<input type="tel" placeholder="Mobile Number *" required />
+							<input type="email" placeholder="Email *" required />
+							<button type="button" onclick="nextStep()">NEXT</button>
+						</form>
+					</div>
+
+					<!-- Step 2 -->
+					<div id="step2" style="display: none;">
+						<h3>Step 2 of 2</h3>
+						<form id="formStep2">
+							<input type="text" placeholder="Address *" required />
+							<input type="text" placeholder="City *" required />
+							<input type="text" placeholder="State *" required />
+							<input type="text" placeholder="ZIP Code *" required />
+							<button type="submit">SUBMIT</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--popup form end-->
 
 
         <!-- Main Footer -->
