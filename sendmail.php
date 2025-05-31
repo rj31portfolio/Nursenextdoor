@@ -36,3 +36,5 @@ if (mail($to, $subject, $email_content, $headers)) {
     echo "Something went wrong. Please try again later.";
 }
 ?>
+
+
