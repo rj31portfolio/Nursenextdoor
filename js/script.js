@@ -970,25 +970,49 @@ var THEMEMASCOT = {};
 })(window.jQuery);
 
 
-window.onload = function () {
-  setTimeout(() => {
-    document.getElementById("popupForm").style.display = "flex";
-  }, 1000);
-};
-
-function closePopup() {
-  document.getElementById("popupForm").style.display = "none";
-}
-
 function nextStep() {
-  document.getElementById("step1").style.display = "none";
-  document.getElementById("step2").style.display = "block";
-}
+    const formStep1 = document.getElementById("formStep1");
+    if (formStep1.checkValidity()) {
+      document.getElementById("step1").style.display = "none";
+      document.getElementById("step2").style.display = "block";
+    } else {
+      formStep1.reportValidity();
+    }
+  }
 
-// OPTIONAL: Add your submit handler
-document.getElementById("formStep2").onsubmit = function (e) {
-  e.preventDefault();
-  alert("Form submitted successfully!");
-  closePopup();
-};
+  function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+  }
 
+  // Submit full form via AJAX
+  document.getElementById("formStep2").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Collect data from both forms
+    const step1 = document.getElementById("formStep1").elements;
+    const step2 = document.getElementById("formStep2").elements;
+
+    const formData = new FormData();
+    formData.append("first_name", step1[0].value);
+    formData.append("last_name", step1[1].value);
+    formData.append("mobile", step1[2].value);
+    formData.append("email", step1[3].value);
+    formData.append("address", step2[0].value);
+    formData.append("city", step2[1].value);
+    formData.append("state", step2[2].value);
+    formData.append("zip", step2[3].value);
+
+    fetch("form-handler.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      alert("Form submitted successfully!");
+      closePopup();
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("There was an error submitting the form.");
+    });
+  });
