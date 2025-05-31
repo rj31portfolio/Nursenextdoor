@@ -15,7 +15,6 @@ if (empty($name) || empty($email) || empty($message)) {
     echo "Please fill in all required fields.";
     exit;
 }
-
 // Build the email content
 $email_content  = "Name: $name\n";
 $email_content .= "Email: $email\n";
