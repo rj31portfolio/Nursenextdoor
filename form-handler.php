@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "City: " . htmlspecialchars($_POST["city"]) . "\n";
     $message .= "State: " . htmlspecialchars($_POST["state"]) . "\n";
     $message .= "ZIP Code: " . htmlspecialchars($_POST["zip"]) . "\n";
-
+ 
     $headers = "From: no-reply@gurujihealthcare.com\r\n";
     $headers .= "Reply-To: " . $_POST["email"] . "\r\n";
 
