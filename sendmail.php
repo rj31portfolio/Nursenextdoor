@@ -22,7 +22,7 @@ $email_content .= "Phone: $phone\n";
 $email_content .= "Subject: $subject\n";
 $email_content .= "Message:\n$message\n";
   
-/ / Email headers
+// Email headers
 $headers  = "From: $name <$email>\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
