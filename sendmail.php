@@ -1,6 +1,6 @@
 <?php
 // Set the recipient email address
-$to = 'info@gurujihealthcare.ca';
+$to = 'info.viraladsmedia@gmail.com'; // Replace with your email address
 
 // Get form fields
 $name    = isset($_POST['form_name']) ? strip_tags(trim($_POST['form_name'])) : '';
